@@ -28,6 +28,11 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,6 +71,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LIB_BIN\Ajax.dll" />
+    <Content Include="LIB_BIN\CKFinder.dll" />
+    <Content Include="LIB_BIN\CKFinder_ImageResize.dll" />
     <Content Include="LIB_BIN\Newtonsoft.Json.dll" />
     <Content Include="LIB_BIN\VSW.Corev1.1.dll" />
     <Content Include="Web.config" />
