@@ -1,0 +1,138 @@
+﻿body 
+{
+   font-size: 15px !important;
+}
+/*Common*/
+.margin-bottom-1px{margin-bottom:1px;}
+.margin-bottom-2px{margin-bottom:2px;}
+.margin-bottom-3px{margin-bottom:3px;}
+.margin-bottom-4px{margin-bottom:4px;}
+.margin-bottom-5px{margin-bottom:5px;}
+.margin-bottom-6px{margin-bottom:6px;}
+.margin-bottom-7px{margin-bottom:7px;}
+.margin-bottom-8px{margin-bottom:8px;}
+.margin-bottom-9px{margin-bottom:9px;}
+.margin-bottom-10px{margin-bottom:10px;}
+.margin-right-2px{margin-right:2px;}
+.margin-none{margin: 0px 0px 0px 0px !important;}
+.padding-none{padding: 0px 0px 0px 0px !important;}
+.padding-left-right-none{padding: 5px 0px 5px 0px !important;}
+.border-full{border: 1px solid #efeaea;}
+.border-right{border-right: 1px solid #efeaea;}
+.border-left{border-left: 1px solid #efeaea;}
+.border-top{border-top: 1px solid #efeaea;}
+.border-bottom{border-bottom: 1px solid #efeaea;}
+.color-shortdescription{color: #777;}
+.padding-10px{padding: 10px;}
+
+.vsw-footer
+{
+    /*background-color: #57af06;
+    background-color: #008b4a;*/
+    border-top: 5px solid #bbc704;
+}
+.footer {
+    /*width: 100%;*/
+    height: auto;
+    text-align: center;
+}
+ul.navi-main {
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    margin-top: 15px;
+    float: left;
+}
+.footer ul.navi-main li {
+    width: auto;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+    color: #fff;
+}
+.footer ul.navi-main li a{color:#fff; font-size: 0.85em;}
+.menuFooter {
+    margin-top: 10px !important;
+}
+.clearfix{/*line-height:1px;*/    display: inline-block;}
+.title-background{background-image:url('../images/title_bg_final.jpg');}
+/* Text menu*/
+.banner-content {font-weight: bold;}
+.banner-content .text-header {color: #003366; font-size: 15pt;}
+.banner-content .text-service {color: #d94f4f; font-size: 13pt;}
+.banner-content .text-call {color: Blue; font-size: 11pt;}
+/*Top menu*/
+.megapanel .title{text-decoration:none;font-size: 120%}
+/*Slide*/
+@media screen and (min-width: 768px){
+.carousel-indicators { bottom: 0px !important;}
+.carousel-caption { right: 20%; left: 20%; padding-bottom: 10px !important; }
+}
+.carousel-caption{bottom: 28px;padding-top:0px;}
+/*Slide text*/
+.news-service{padding: 10px 10px 10px 10px;}
+.news-service .text-group{text-transform:uppercase;font-weight:bold;}
+.news-service div.title, .news-service ul li {margin-bottom:10px;}
+.news-service span{margin-left:10px;}
+.news-service .title{border-bottom: 1px solid rgb(236, 236, 236);padding-bottom:10px;color: #d94f4f; font-size: 13pt;}
+.news-service .content-detail{padding-left:20px; font-size: 10pt;}
+.news-service .sub-title{padding:5px;}
+.news-service .sub-title:hover{background-color: #265a88; background-position: 0 -15px; color: White;cursor:pointer;}
+.news-service .content-menu{padding: 15px;}
+.news-service .content-menu a i{width: 17.16px; height:15px;}
+/*slide image*/
+#myCarousel{margin-top:2px;}
+/*Call us*/
+.callus{padding-top:10px; padding-bottom: 10px;}
+.callus .fa-phone, .callus .phone{color:#d94f4f; font-weight:bold;}
+.callus .title{font-size:110%; font-weight: bold; color: #003366;}
+/*service-detail*/
+.service-detail .header{padding: 10px; font-weight:bold; border-bottom: 1px solid rgba(46, 109, 164, 0.36); text-transform:uppercase;color: #5cb85c;letter-spacing: 1px; padding-left: 0px;}
+.service-detail .header a { color: #5cb85c; text-decoration: none; }
+.service-detail .title{padding: 5px;font-size:110%; border-bottom: 1px solid #efeaea;}
+.service-detail .content .group .border-right{min-height: 150px;max-height: 150px;}
+.service-detail .content .list-content{max-height:105px;overflow-y:scroll;}
+.service-detail .content .list-content a{text-decoration:none; cursor:pointer;color:#777;}
+.service-detail .content .list-content a:hover{color: #2e6da4; font-weight: 600;}
+.service-detail .content .title a{text-decoration:none; cursor:pointer;color:#003366;}
+/*Marketing*/
+.martket-info{padding:10px;}
+/*News in home page*/
+.news-homepage{border-top: 1px solid rgba(46, 109, 164, 0.36);}
+.news-homepage .news-group{padding-right: 20px;}
+.news-homepage .title{padding:10px; border-bottom: 1px solid #e03e3e;margin-bottom:5px;font-weight:bold;}
+.news-homepage ul li{margin-top:5px;}
+.news-homepage ul li i{color:#e03e3e;}
+.news-homepage ul li a{ text-decoration:none; cursor:pointer;color:#777;}
+
+/*Sub page*/
+.main-subpage {margin-top: 5px; padding: 10px;}
+.callus-subpage li:first-child{margin-bottom: 10px; border-bottom: 1px solid #efeaea; padding-bottom: 5px;}
+/*Module*/
+ .module-subpage{}
+ .module-subpage .title{padding: 5px; margin-bottom: 5px; border-bottom: 1px solid #efeaea; text-align:center; font-weight:bold; color:#003366; font-size:110%;}
+ .module-subpage li{padding:3px;}
+ .module-subpage li.read-more{padding-top:5px; padding-bottom:0px; margin-top:5px;text-align: right; border-top: 1px dashed #efeaea;}
+/*News List*/
+.news-list > .title{border-bottom: 1px solid #efeaea; font-size: 150%; font-weight: bold; text-transform:uppercase; letter-spacing: 2px;color:#003366; padding-bottom:3px; margin-bottom:10px;}
+.news-list .news-item{margin-bottom: 10px;}
+.news-list .news-item .createdate{font-size:70%; color: #777; font-family:Tahoma;padding-bottom:3px;}
+.news-list .news-item .title{font-weight:bold;margin-bottom:3px;}
+.news-list .news-item .read-more{padding-top:0px; padding-bottom:5px; margin-top:0px;margin-bottom:10px;text-align: right; border-bottom: 1px dashed #efeaea;}
+/*News detail*/
+.news-detail .site-map{font-weight:bold;letter-spacing:2px;color: #777;padding:3px; margin-bottom:10px;text-transform:uppercase;}
+.news-detail .detail > .title{ font-size:180%; font-weight:bold; color:#003366; letter-spacing:1px;padding:5px; margin-bottom:10px;}
+.news-detail .detail .content{padding:2px;}
+.news-detail .detail .tag{padding:5px;}
+.news-detail .list-other .title{ border-top: 1px dashed #efeaea; font-size:120%; font-weight:bold;padding:5px;} 
+.news-detail .list-other .list-news-other{padding:5px; padding-left:25px;} 
+.news-detail .list-other .list-news-other li{padding-bottom:5px;padding-top:5px;} 
+/*footer */
+.copy-right{margin-top:10px;}
+/*Contact number ontop*/
+.phonenumber-ontop {    border-radius: 5px; padding: 10px; background-color: rgba(0, 51, 102, 0.76); bottom: 0; right: 2px; color: White; font-size: 15pt;font-weight: bold; position: fixed; z-index: 10000; text-align: right;}
+.phonenumber-ontop a{color:#ffe200 !important;}

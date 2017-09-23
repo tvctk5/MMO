@@ -1,0 +1,716 @@
+Time : 01/12/2016 02:37:45
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : g:\Working\dienlanh24h.vn\Sources\VSW.Website\Views\CNews\HomePage.ascx(17): error CS1026: ) expected
+Source : System.Web
+TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+StackTrace :    at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at VSW.Core.MVC.ViewPage.(Control , String , String , String , String , String )
+   at VSW.Core.MVC.ViewPage.(Control , String )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\97bcd9c4\63d39375\App_Web_default.aspx.cdcab7d2.hhkyg6n4.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 02/12/2016 01:39:00
+IP : 127.0.0.1
+URL : http://product.vn/CP/Default.aspx
+Message : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Mod_Menu_Dynamic_Sys_Page". The conflict occurred in database "ProductManager", table "dbo.Sys_Page", column 'ID'.
+The statement has been terminated.
+SQLText : INSERT INTO [Mod_Menu_Dynamic]([ModMenuTypeID], [ParentID], [LangID], [SysPageID], [Name], [Url], [IconUrl], [ShowPopup], [Order], [Activity], [CreateDate], [CssIcon], [Code], [Description]) VALUES(@ModMenuTypeID, @ParentID, @LangID, @SysPageID, @Name, @Url, @IconUrl, @ShowPopup, @Order, @Activity, @CreateDate, @CssIcon, @Code, @Description); SELECT @@IDENTITY
+SQLParameters : @ModMenuTypeID=6, @ParentID=0, @LangID=1, @SysPageID=0, @Name=Dịch vụ sửa chữa, @Url=, @IconUrl=, @ShowPopup=False, @Order=26, @Activity=True, @CreateDate=02/12/2016 1:39:00 SA, @CssIcon=fa fa-cogs fa-x4, @Code=, @Description=Nhanh chóng, chuyên nghiệp, đảm bảo, 
+Source : VSW.Corev1.1
+TargetSite : VSW.Core.Global.Object ExecuteScalar(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteScalar(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQL.Insert(String ConnectionString, String TableName, Boolean Identity, Object[] Fields)
+   at VSW.Core.Models.ServiceBase`1.Insert(Boolean Identity, Object[] Fields)
+   at VSW.Core.Models.ServiceBase`1.
+(T1 , String[] , String[] , Dictionary`2 )
+   at VSW.Core.Models.ServiceBase`1.Save(T1 entity, Expression`1 PropertyExec, Expression`1 PropertyNotExec, Dictionary`2 NewFields)
+   at VSW.Core.Models.ServiceBase`1.Save(T1 entity)
+   at VSW.Lib.CPControllers.ModMenu_DynamicController.ValidSave(ModMenu_DynamicModel model)
+
+
+Time : 02/12/2016 02:14:41
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : g:\Working\dienlanh24h.vn\Sources\VSW.Website\Views\CNews\Slide.ascx(130): error CS0103: The name 'item' does not exist in the current context
+Source : System.Web
+TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+StackTrace :    at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at VSW.Core.MVC.ViewPage.(Control , String , String , String , String , String )
+   at VSW.Core.MVC.ViewPage.(Control , String )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\97bcd9c4\63d39375\App_Web_default.aspx.cdcab7d2.hchlpxfc.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 03/12/2016 05:25:23
+IP : 127.0.0.1
+URL : http://product.vn/Default.aspx
+Message : g:\Working\dienlanh24h.vn\Sources\VSW.Website\Views\CNewsSubPage\News.ascx(24): error CS1061: 'VSW.Lib.Models.SysPageEntity' does not contain a definition for 'Id' and no extension method 'Id' accepting a first argument of type 'VSW.Lib.Models.SysPageEntity' could be found (are you missing a using directive or an assembly reference?)
+Source : System.Web
+TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+StackTrace :    at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at VSW.Core.MVC.ViewPage.(Control , String , String , String , String , String )
+   at VSW.Core.MVC.ViewPage.(Control , String )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\97bcd9c4\63d39375\App_Web_default.aspx.cdcab7d2.xth8e3bl.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 03/12/2016 07:10:00
+IP : 127.0.0.1
+URL : http://product.vn/CP/Default.aspx?rnd=557472
+Message : Object reference not set to an instance of an object.
+Source : App_Web_mcontent.ascx.c2fc07f7.hpybys3w
+TargetSite : Void __Render__control1(System.Web.UI.HtmlTextWriter, System.Web.UI.Control)
+StackTrace :    at ASP.views_design_mcontent_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\dienlanh24h.vn\Sources\VSW.Website\Views\Design\MContent.ascx:line 34
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.WebControls.WebControl.RenderContents(HtmlTextWriter writer)
+   at System.Web.UI.WebControls.WebControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ___votunet_.		.	
+(Object , HtmlTextWriter )
+   at ___votunet_.
+.	
+(Object , HtmlTextWriter , 
+ )
+   at VSW.Core.Web.Utils.GetHtmlControl(Page ViewPage, String ControlPath, Object[] Params)
+   at VSW.Lib.CPControllers.AjaxController.ActionPageGetControl(PageGetControlModel model)
+
+
+Time : 04/12/2016 10:42:20
+IP : 127.0.0.1
+URL : http://product.vn/Default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Code]=@p1000)
+SQLParameters : @p1000=vn, 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetByCode(String code)
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\dienlanh24h.vn\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\97bcd9c4\63d39375\App_Web_default.aspx.cdcab7d2.xth8e3bl.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\97bcd9c4\63d39375\App_Web_default.aspx.cdcab7d2.xth8e3bl.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 04/12/2016 02:43:40
+IP : 127.0.0.1
+URL : http://product.vn/Default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Code]=@p1000)
+SQLParameters : @p1000=vn, 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetByCode(String code)
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\dienlanh24h.vn\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\97bcd9c4\63d39375\App_Web_default.aspx.cdcab7d2.xth8e3bl.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\97bcd9c4\63d39375\App_Web_default.aspx.cdcab7d2.xth8e3bl.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 04/12/2016 02:43:42
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Default]=1)
+SQLParameters : 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetDefault()
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\dienlanh24h.vn\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\97bcd9c4\63d39375\App_Web_default.aspx.cdcab7d2.xth8e3bl.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\97bcd9c4\63d39375\App_Web_default.aspx.cdcab7d2.xth8e3bl.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 04/12/2016 09:09:44
+IP : 127.0.0.1
+URL : http://product.vn/Default.aspx
+Message : Object reference not set to an instance of an object.
+Source : App_Web_index.ascx.91956a24.qbfmrzt6
+TargetSite : Void __Render__control1(System.Web.UI.HtmlTextWriter, System.Web.UI.Control)
+StackTrace :    at ASP.views_mnews_index_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\dienlanh24h.vn\Sources\VSW.Website\Views\MNews\Index.ascx:line 9
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at VSW.Core.MVC.ViewPageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 04:37:04
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=a73bd53833964851&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 04:37:04
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=a73bd53833964851&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:31:41
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=c7eb81c53570986a&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:31:41
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=c7eb81c53570986a&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:32:00
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:32:06
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:33:50
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:33:51
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:34:00
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:34:03
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:34:05
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:34:20
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:34:27
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:41:07
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:41:15
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:41:23
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:41:36
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:41:40
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:41:45
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:41:51
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:41:57
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=fb16148f6ef2f655&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:42:15
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=9d4f0e04f327b35a&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:42:32
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=384fa4ca2ab2c67e&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:42:49
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=058d6d388040c3d7&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:43:10
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=9af8bc6fbe186259&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 05/12/2016 05:43:24
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/&langCode=vi&hash=2a5aa656c3a9f45b&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+

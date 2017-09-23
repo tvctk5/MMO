@@ -1,0 +1,219 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.UI.MasterPage" %>
+
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head id="Head" runat="server">
+    <title></title>
+    <meta name="author" content="Phamlen84@yahoo.com.vn" />
+    <meta name="generator" content="VSWv1.0 - AllProject.Net" />
+
+    <meta name="robots" content="index, follow" />
+    <meta id="description" name="description" content="" runat="server" />
+    <meta id="keywords" name="keywords" content="" runat="server" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="/Content/plugins/adidas-pack/html/styles/style.css" />
+    <link href="/Content/plugins/adidas-pack/html/styles/general.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/Content/plugins/adidas-pack/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Content/plugins/adidas-pack/html/scripts/jquery.js"></script>
+    <script type="text/javascript" src="/Content/plugins/adidas-pack/html/scripts/validate.js"></script>
+</head>
+<body id="body">
+    <form id="vswForm" runat="server">
+     
+     <div id="box_main">
+        <div class="box_banner">
+            <VSW:StaticControl Code="CAdv" VSWID="vswBanner" runat="server" />
+        </div>
+        <VSW:StaticControl Code="CMenu" VSWID="vswMenuTop" runat="server" />
+        <div class="box-content">
+            <div class="box-flash">
+                <VSW:StaticControl Code="CAdv" VSWID="vswSlide" runat="server" />
+            </div>
+            <div class="box100">
+                <div class="contentleft">
+                   <VSW:DynamicControl ID="DynamicControl1" Code="Main" runat="server" />
+                </div>
+                <div class="contentright">
+                   <VSW:DynamicControl ID="DynamicControl2" Code="Right" runat="server" />
+                </div>
+            </div>
+        </div>
+        <div class="boxfooter">
+            <p style="padding-top: 15px;">
+                <div style="text-align: center;">
+                   {RS:Web_Footer}
+                </div>
+            </p>
+        </div>
+    </div>
+
+    </form>
+</body>
+</html>--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="vi-vn" lang="vi-vn" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head runat="server" id="Head" class="headerMain" prefix="og: http://ogp.me/ns# fb:http://ogp.me/ns/fb# article:http://ogp.me/ns/article#">
+    <title>Dienlanh24h.vn - Sửa chữa lắp đặt bảo dưỡng điện tử điện lạnh tại Hà Nội</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+    <meta name="author" content="Dienlanh24h.vn" />
+    <meta name='COPYRIGHT' content='&copy; Dienlanh24h.vn' />  
+    <meta name="robots" content="noodp,index, follow" />
+    <meta id="title" name="title" content="" runat="server" />
+    <meta id="description" name="description" content="" runat="server" />
+    <meta id="keywords" name="keywords" content="" runat="server" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link href="/Content/plugins/adidas-pack/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <%--<script type="text/javascript" src="/Content/plugins/adidas-pack/js/jquery.min.js"></script>--%>
+    <script src="/Content/plugins/jQuery/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <!-- Bootrap -->
+    <link href="/Content/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <script src="/Content/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- End Bootrap -->
+
+    <!-- Default -->
+    <link href="/Content/css/default.css" rel="stylesheet" type="text/css" />
+    <!-- End Default -->
+    
+    <!--font-awesome-->
+    <link href="/Content/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css" />
+    <!--End font-awesome-->
+
+    <!-- start menu -->
+    <link href="/Content/plugins/adidas-pack/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="/Content/plugins/adidas-pack/js/megamenu.js"></script>
+    <!-- end menu -->
+    <!-- top scrolling -->
+    <script type="text/javascript" src="/Content/plugins/adidas-pack/js/move-top.js"></script>
+    <script type="text/javascript" src="/Content/plugins/adidas-pack/js/easing.js"></script>
+    
+    <!-- Js default -->
+    <script type="text/javascript" src="/Content/js/default.js"></script>
+
+    <%
+        if (VSW.Lib.Global.Session.Exists("CssJsForTemplate"))
+        {%>
+    <%= VSW.Lib.Global.Session.GetValue("CssJsForTemplate")%>
+    <%
+            VSW.Lib.Global.Session.Remove("CssJsForTemplate");
+        } %>
+    <%
+        if (VSW.Lib.Global.Session.Exists("CssJsForPage"))
+        {%>
+    <%= VSW.Lib.Global.Session.GetValue("CssJsForPage") %>
+    <%
+            VSW.Lib.Global.Session.Remove("CssJsForPage");
+        } %>
+</head>
+<body>
+    <div class="header-top row">
+        <div class="col-lg-12">
+            <div class="wrap">
+                <%--<VSW:StaticControl ID="StaticControl1" Code="CAdv" VSWID="vswBanner" runat="server" />--%>
+                <VSW:DynamicControl ID="DynamicControl1" Code="Banner" runat="server" />
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom background-color row">
+        <div class="col-lg-12">
+            <div class="wrap">
+                <!-- start header menu -->
+                <%--<VSW:StaticControl ID="StaticControl2" Code="CMenu" VSWID="vswMenuTop" runat="server" />--%>
+                <VSW:DynamicControl ID="DynamicControl2" Code="Menu" runat="server" />
+            </div>
+        </div>
+    </div>
+    <div class="main row main-subpage">
+        <div class="col-lg-12">
+            <div class="wrap">
+                <div class="col-lg-9">
+                    <div class="">
+                        <VSW:DynamicControl ID="DynamicControl3" Code="Main" runat="server" />
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <VSW:DynamicControl ID="DynamicControl4" Code="Main-Right" runat="server" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="vsw-footer background-color row">
+        <div class="col-lg-12">
+            <div class="wrap">
+                <VSW:DynamicControl ID="DynamicControl5" Code="Footer" runat="server" />
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <a href="#" id="toTop" style="display: block;">
+        <span id="toTopHover" style="opacity: 1;">
+        </span>
+    </a>
+    
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '583225338541315',
+            xfbml: true,
+            version: 'v2.8'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=583225338541315";
+        fjs.parentNode.insertBefore(js, fjs);
+    } (document, 'script', 'facebook-jssdk'));
+    </script>
+
+        <%--<script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '583225338541315',
+                    xfbml: true,
+                    version: 'v2.8'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) { return; }
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            } (document, 'script', 'facebook-jssdk'));
+    </script>--%>
+<%--    <div
+      class="fb-like"
+      data-share="true"
+      data-width="450"
+      data-show-faces="true">
+    </div>  --%>
+</body>
+</html>
