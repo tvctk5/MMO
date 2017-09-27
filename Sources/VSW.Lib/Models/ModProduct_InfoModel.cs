@@ -38,6 +38,9 @@ namespace VSW.Lib.Models
         public string PageKeywords { get; set; }
 
         [DataInfo]
+        public string SKU { get; set; }
+
+        [DataInfo]
         public string Code { get; set; }
 
         [DataInfo]

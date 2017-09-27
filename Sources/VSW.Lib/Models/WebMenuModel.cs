@@ -51,6 +51,15 @@ namespace VSW.Lib.Models
         [DataInfo]
         public string CssIcon { get; set; }
 
+        [DataInfo]
+        public int MarketplaceId { get; set; }
+
+        [DataInfo]
+        public bool IsParentMarketplace { get; set; }
+
+        [DataInfo]
+        public string DisplayName { get; set; }
+
         #endregion
     }
 
