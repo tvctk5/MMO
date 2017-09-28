@@ -59,14 +59,14 @@
     </Reference>
     <Reference Include="CKFinder, Version=2.1.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\CKFinder.dll</HintPath>
+      <HintPath>..\Lib\LIB_BIN\CKFinder.dll</HintPath>
     </Reference>
     <Reference Include="CKFinder_ImageResize, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\CKFinder_ImageResize.dll</HintPath>
+      <HintPath>..\Lib\LIB_BIN\CKFinder_ImageResize.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\LIB_BIN\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\Lib\LIB_BIN\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -969,6 +969,8 @@
     <Content Include="CP\Tools\SQLTools.aspx" />
     <Content Include="CP\Tools\UnLoad.aspx" />
     <Content Include="CP\Views\AccessDenied\Index.ascx" />
+    <Content Include="CP\Views\ModCurrency\Add.ascx" />
+    <Content Include="CP\Views\ModCurrency\Index.ascx" />
     <Content Include="CP\Views\ModDT_BaoCaoThongKe\Add.ascx" />
     <Content Include="CP\Views\ModDT_BaoCaoThongKe\Index.ascx" />
     <Content Include="CP\Views\FormDkKyDaiLyDonHang\FormDkKyDaiLyDonHang.ascx" />
@@ -994,6 +996,10 @@
     <Content Include="CP\Views\ModDT_Ky_DaiLy_DonHang_SanPham\Index.ascx" />
     <Content Include="CP\Views\ModLoai_DaiLy\Add.ascx" />
     <Content Include="CP\Views\ModLoai_DaiLy\Index.ascx" />
+    <Content Include="CP\Views\ModMarketplace\Add.ascx" />
+    <Content Include="CP\Views\ModMarketplace\Index.ascx" />
+    <Content Include="CP\Views\ModMMO_Product\Add.ascx" />
+    <Content Include="CP\Views\ModMMO_Product\Index.ascx" />
     <Content Include="CP\Views\ModProvince\Add.ascx" />
     <Content Include="CP\Views\ModProvince\Index.ascx" />
     <Content Include="CP\Views\ModTemplate\Add.ascx" />
@@ -1589,12 +1595,15 @@
     <Content Include="Views\CAdv\Banner.ascx" />
     <Content Include="Views\CAdv\Default.ascx" />
     <Content Include="Views\CAdv\Slide.ascx" />
+    <Content Include="Views\CCurrency\Default.ascx" />
+    <Content Include="Views\CMarketplace\Default.ascx" />
     <Content Include="Views\CMenu\Banner.ascx" />
     <Content Include="Views\CMenu\CallUs.ascx" />
     <Content Include="Views\CMenu\CategoryHomePage.ascx" />
     <Content Include="Views\CMenu\CallUs-SubPage.ascx" />
     <Content Include="Views\CMenu\Service-SubPage.ascx" />
     <Content Include="Views\CMenu\ServiceDetails.ascx" />
+    <Content Include="Views\CMMO_Product\Default.ascx" />
     <Content Include="Views\CNewsSubPage\News.ascx" />
     <Content Include="Views\CNews\HomePage.ascx" />
     <Content Include="Views\CNews\Slide.ascx" />
@@ -1613,7 +1622,13 @@
     <Content Include="Views\HttpError\500.html" />
     <Content Include="Views\MCategory\Index.ascx" />
     <Content Include="Views\MContent\Index.ascx" />
+    <Content Include="Views\MCurrency\Detail.ascx" />
+    <Content Include="Views\MCurrency\Index.ascx" />
     <Content Include="Views\MFeedback\Index.ascx" />
+    <Content Include="Views\MMarketplace\Detail.ascx" />
+    <Content Include="Views\MMarketplace\Index.ascx" />
+    <Content Include="Views\MMMO_Product\Detail.ascx" />
+    <Content Include="Views\MMMO_Product\Index.ascx" />
     <Content Include="Views\MNews\Detail.ascx" />
     <Content Include="Views\MNews\Index.ascx" />
     <Content Include="Views\MProduct_Info\Copy of Index.ascx" />

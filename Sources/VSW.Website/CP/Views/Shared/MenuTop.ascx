@@ -21,7 +21,7 @@
                 <%} %>
             </ul>
         </li>
-        <%--<li class="node"><a>{RS:MenuTop_Product}</a>
+        <li class="node"><a>{RS:MenuTop_Product}</a>
             <ul>
                 <% listModule = VSW.Lib.Web.Application.CPModules.Where(o => o.ShowInMenu == true && (o.MenuGroupId == null || o.MenuGroupId == 0)).OrderBy(o => o.Order).ToList(); %>
                 <%for (int i = 0; listModule != null && i < listModule.Count; i++)
@@ -30,7 +30,7 @@
                     <%=listModule[i].Name%></a></li>
                 <%} %>
             </ul>
-        </li>--%>
+        </li>
         <li class="node"><a>{RS:MenuTop_Utilities}</a>
             <ul>
                 <% listModule = VSW.Lib.Web.Application.CPModules.Where(o => o.ShowInMenu == true && o.MenuGroupId == 4).OrderBy(o => o.Order).ToList(); %>
