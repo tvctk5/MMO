@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProductManager" Class="DbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQL2008R2;Initial Catalog=ProductManager;Persist Security Info=True;User ID=sa;Password=123**abc" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MMO" Class="DbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQL2012;Initial Catalog=MMO;Integrated Security=True" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CP_Access" Member="CP_Accesses">
     <Type Name="CP_Access">
       <Column Name="RefCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -61,6 +61,44 @@
       <Column Name="RoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="CP_Role_CP_UserRole" Member="CP_Role" ThisKey="RoleID" OtherKey="ID" Type="CP_Role" IsForeignKey="true" />
       <Association Name="CP_User_CP_UserRole" Member="CP_User" ThisKey="UserID" OtherKey="ID" Type="CP_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MMO_Product" Member="MMO_Products">
+    <Type Name="MMO_Product">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SKU" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PageTitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PageDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PageKeywords" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SalePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DiscountedPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DiscountedPercentage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiscountedValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CurrencyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category_LV1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Category_LV2" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Category_LV3" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Category_LV1_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category_LV2_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category_LV3_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryPath" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="Image1" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="Image2" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="Image3" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="Image4" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="Image5" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="RedirectUrl" Type="System.String" DbType="NVarChar(2048)" CanBeNull="true" />
+      <Column Name="Brand" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BrandId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MenuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarketplaceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountClick" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Mod_Adv" Member="Mod_Advs">
@@ -128,6 +166,15 @@
       <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="Mod_Country_Mod_Province" Member="Mod_Provinces" ThisKey="ID" OtherKey="ModCountryId" Type="Mod_Province" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Currency" Member="Mod_Currencies">
+    <Type Name="Mod_Currency">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Symbol" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ExchangeRate" Type="System.Decimal" DbType="Decimal(18,6)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Mod_District" Member="Mod_Districts">
@@ -291,6 +338,13 @@
       <Association Name="Mod_Loai_DaiLy_Mod_Product_Agent" Member="Mod_Product_Agents" ThisKey="ID" OtherKey="ModLoaiDaiLyId" Type="Mod_Product_Agent" />
     </Type>
   </Table>
+  <Table Name="dbo.Mod_Marketplace" Member="Mod_Marketplaces">
+    <Type Name="Mod_Marketplace">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="WebsiteLink" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Mod_Menu_Dynamic" Member="Mod_Menu_Dynamics">
     <Type Name="Mod_Menu_Dynamic">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -305,6 +359,9 @@
       <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CssIcon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
       <Association Name="Mod_Menu_Type_Mod_Menu_Dynamic" Member="Mod_Menu_Type" ThisKey="ModMenuTypeID" OtherKey="ID" Type="Mod_Menu_Type" IsForeignKey="true" />
       <Association Name="Sys_Lang_Mod_Menu_Dynamic" Member="Sys_Lang" ThisKey="LangID" OtherKey="ID" Type="Sys_Lang" IsForeignKey="true" />
       <Association Name="Sys_Page_Mod_Menu_Dynamic" Member="Sys_Page" ThisKey="SysPageID" OtherKey="ID" Type="Sys_Page" IsForeignKey="true" />
@@ -325,6 +382,7 @@
       <Column Name="MenuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SlideType" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="Code" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="Summary" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
@@ -340,6 +398,7 @@
       <Column Name="CountViewed" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CountComment" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CssIcon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="Web_Menu_Mod_New" Member="Web_Menu" ThisKey="MenuID" OtherKey="ID" Type="Web_Menu" IsForeignKey="true" />
     </Type>
   </Table>
@@ -589,6 +648,7 @@
       <Column Name="PageTitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="PageDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="PageKeywords" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SKU" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="Code" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="CountNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -637,6 +697,8 @@
       <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="Mod_Product_Info_Mod_DT_Ky_DaiLy_DonHang_SanPham" Member="Mod_DT_Ky_DaiLy_DonHang_SanPhams" ThisKey="ID" OtherKey="ModProductId" Type="Mod_DT_Ky_DaiLy_DonHang_SanPham" />
       <Association Name="Mod_Product_Info_Mod_Product_Comment" Member="Mod_Product_Comments" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Comment" />
       <Association Name="Mod_Product_Info_Mod_Product_Info_Agent" Member="Mod_Product_Info_Agents" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_Agent" />
@@ -1162,6 +1224,8 @@
       <Column Name="CssFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="ChangeJs" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="JsFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CssContent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="JsContent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="Sys_Page_Mod_Menu_Dynamic" Member="Mod_Menu_Dynamics" ThisKey="ID" OtherKey="SysPageID" Type="Mod_Menu_Dynamic" />
       <Association Name="Sys_Page_Sys_Site" Member="Sys_Sites" ThisKey="ID" OtherKey="PageID" Type="Sys_Site" />
       <Association Name="Sys_Lang_Sys_Page" Member="Sys_Lang" ThisKey="LangID" OtherKey="ID" Type="Sys_Lang" IsForeignKey="true" />
@@ -1185,7 +1249,7 @@
   </Table>
   <Table Name="dbo.Sys_Template" Member="Sys_Templates">
     <Type Name="Sys_Template">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="[File]" Member="File" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -1193,6 +1257,8 @@
       <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CssFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="JsFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CssContent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="JsContent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="Sys_Template_Sys_Page" Member="Sys_Pages" ThisKey="ID" OtherKey="TemplateID" Type="Sys_Page" />
       <Association Name="Sys_Lang_Sys_Template" Member="Sys_Lang" ThisKey="LangID" OtherKey="ID" Type="Sys_Lang" IsForeignKey="true" />
     </Type>
@@ -1203,14 +1269,19 @@
       <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ProductAreaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="Code" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Custom" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
       <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ParentCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="CurrentCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CssIcon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MarketplaceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsParentMarketplace" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Association Name="Web_Menu_Mod_Adv" Member="Mod_Advs" ThisKey="ID" OtherKey="MenuID" Type="Mod_Adv" />
       <Association Name="Web_Menu_Mod_New" Member="Mod_News" ThisKey="ID" OtherKey="MenuID" Type="Mod_New" />
       <Association Name="Web_Menu_Mod_Product_Info_ProductGroup" Member="Mod_Product_Info_ProductGroups" ThisKey="ID" OtherKey="MenuID" Type="Mod_Product_Info_ProductGroup" />
@@ -1228,4 +1299,24 @@
       <Association Name="Sys_Lang_Web_Resource" Member="Sys_Lang" ThisKey="LangID" OtherKey="ID" Type="Sys_Lang" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.FN_CREATE_CATEGORY" Method="FN_CREATE_CATEGORY" IsComposable="true">
+    <Parameter Name="ParentId" Parameter="parentId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DisplayName" Parameter="displayName" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="MarketplaceId" Parameter="marketplaceId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ufn_Replace_XmlChars" Method="ufn_Replace_XmlChars" IsComposable="true">
+    <Parameter Name="XML" Parameter="xML" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.FN_GET_CATEGORY_CURRENTCODE" Method="FN_GET_CATEGORY_CURRENTCODE" IsComposable="true">
+    <Parameter Name="ParentId" Parameter="parentId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.AddProduct_Lazada" Method="AddProduct_Lazada">
+    <Parameter Name="XML" Parameter="xML" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MarketplaceId" Parameter="marketplaceId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

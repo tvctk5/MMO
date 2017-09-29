@@ -212,6 +212,9 @@ namespace VSW.Lib.Global
 
         public static string GetCode(string s)
         {
+            if (string.IsNullOrEmpty(s))
+                return string.Empty;
+
             s = RemoveNotABCChar(RemoveVietNamese(s));
 
             return s.Trim().Replace(" ", "-")
