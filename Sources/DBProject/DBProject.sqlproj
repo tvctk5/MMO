@@ -165,6 +165,9 @@
     <Build Include="dbo\Tables\CP_Role.sql" />
     <Build Include="dbo\Tables\CP_Access.sql" />
     <Build Include="dbo\Functions\ufn_Replace_XmlChars.sql" />
+    <Build Include="dbo\Functions\FN_GET_CATEGORY_CURRENTCODE.sql" />
+    <Build Include="dbo\Functions\FN_CREATE_CATEGORY.sql" />
+    <Build Include="dbo\Stored Procedures\AddProduct_Lazada.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SqlSchemaCompare2.scmp" />
