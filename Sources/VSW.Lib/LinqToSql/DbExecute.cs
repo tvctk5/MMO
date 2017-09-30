@@ -46,6 +46,8 @@ namespace VSW.Lib.LinqToSql
         {
             DbDataContext dbCreate = new DbDataContext(getConnectionString());
             dbCreate.DeferredLoadingEnabled = bolLazyLoad;
+            dbCreate.CommandTimeout = 180;
+
             return dbCreate;
         }
 

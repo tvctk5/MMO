@@ -4,13 +4,17 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using VSW.Lib.Models;
+using VSW.Lib;
+using VSW.Lib.LinqToSql;
+using System.Data.Linq;
+using System.Xml;
 
 namespace Import_Lazada
 {
     class Program
     {
         const int MarketplaceId = 1;
-        const string PathFile = @"C:\Users\CanTV\Downloads\feed.csv"; // @"C:\Users\CanTV\Downloads\feed_100.csv";
+        const string PathFile = @"C:\Users\Administrator\Downloads\feed.csv"; // @"C:\Users\CanTV\Downloads\feed_100.csv";
         static void Main(string[] args)
         {
             var data = (new Program()).GetListDataFromText(PathFile);
@@ -19,13 +23,13 @@ namespace Import_Lazada
         public List<ModMMO_ProductEntity> GetListDataFromText(string path)
         {
             var listData = new List<ModMMO_ProductEntity>();
-
-            // var texts = File.ReadAllLines(path);
+            
             int i = 0;
+            int CountAllRow = 0;
             var item = new ModMMO_ProductEntity();
             string Data = string.Empty;
 
-            string Text_Format = @"<ITEM>
+            string Text_Format = @"<CATEGORY>
                                         <SKU>{0}</SKU>
                                         <Name>{1}</Name>
                                         <SalePrice>{2}</SalePrice>
@@ -46,7 +50,11 @@ namespace Import_Lazada
                                         <DisplayName>{17}</DisplayName>
                                         <MarketplaceId>{18}</MarketplaceId>
                                         <PageTitle>{19}</PageTitle>
-                                    </ITEM>";
+                                        <Category_LV1_Code>{20}</Category_LV1_Code>
+                                        <Category_LV2_Code>{21}</Category_LV2_Code>
+                                        <Category_LV3_Code>{22}</Category_LV3_Code>
+                                    </CATEGORY>";
+            bool bolContinue = true;
             foreach (var itemLine in File.ReadLines(path))
             {
                 if (i <= 0)
@@ -55,32 +63,65 @@ namespace Import_Lazada
                     continue;
                 }
 
+                // Count All Row
+                CountAllRow++;
+
                 item = GetItemFromLine(itemLine);
                 if (item == null)
                     continue;
 
+                if (item.SKU == "BO906OTAA2S7D5VNAMZ-4784195")
+                    bolContinue = false;
+
+                if (bolContinue)
+                {
+                    i = 1;
+                    continue;
+                }
+
                 //listData.Add(item);
                 Data += string.Format(Text_Format,
-                    item.SKU,
-                    item.Name,
+                    XmlEscape(item.SKU),
+                    XmlEscape(item.Name),
                     item.SalePrice,
                     item.DiscountedPrice,
                     item.DiscountedPercentage,
-                    item.Category_LV1,
-                    item.Category_LV2,
-                    item.Category_LV3,
-                    item.Image1,
-                    item.Image2,
-                    item.Image3,
-                    item.Image4,
-                    item.Image5,
-                    item.RedirectUrl,
-                    item.Brand,
-                    item.CategoryPath,
+                    XmlEscape(item.Category_LV1),
+                    XmlEscape(item.Category_LV2),
+                    XmlEscape(item.Category_LV3),
+                    XmlEscape(item.Image1),
+                    XmlEscape(item.Image2),
+                    XmlEscape(item.Image3),
+                    XmlEscape(item.Image4),
+                    XmlEscape(item.Image5),
+                    XmlEscape(item.RedirectUrl),
+                    XmlEscape(item.Brand),
+                    XmlEscape(item.CategoryPath),
                     item.DiscountedValue,
-                    item.DisplayName,
+                    XmlEscape(item.DisplayName),
                     item.MarketplaceId,
-                    item.PageTitle);
+                    XmlEscape(item.PageTitle),
+                    XmlEscape(VSW.Lib.Global.Data.GetCode(item.Category_LV1)),
+                    XmlEscape(VSW.Lib.Global.Data.GetCode(item.Category_LV2)),
+                    XmlEscape(VSW.Lib.Global.Data.GetCode(item.Category_LV3)));
+
+                i++;
+                if (i == 500)
+                {
+                    i = 1;
+
+                    // Insert data
+                    InsertToDB(Data);
+                    Data = string.Empty;
+                }
+
+            }
+
+            if (!string.IsNullOrEmpty(Data))
+            {
+                // Insert data
+                InsertToDB(Data);
+                Data = string.Empty;
             }
             return listData;
         }
@@ -90,7 +131,73 @@ namespace Import_Lazada
             if (string.IsNullOrEmpty(text_line))
                 return null;
 
-            var Arr_Split = text_line.Split(',');
+            string[] Arr_Split = new string[16]; // text_line.Split(',');
+            var defaultArr = text_line.Split(',');
+            if (defaultArr.Length == 16)
+                Arr_Split = defaultArr;
+            else
+            {
+                var columnValue = "";
+                string tempValue = string.Empty;
+                var SaveList = new List<string>();
+
+                for (int i = 0; i < defaultArr.Length; i++)
+                {
+                    columnValue = defaultArr[i];
+
+                    if(columnValue.Length == 1 && columnValue == "\"")
+                    {
+                        if (!string.IsNullOrEmpty(tempValue))
+                        {
+                            SaveList.Add(tempValue.Trim('"'));
+                            tempValue = string.Empty;
+                            continue;
+                        }
+                    }
+
+                    if ((columnValue.StartsWith("\"") && columnValue.EndsWith("\"")) || 
+                        (!columnValue.StartsWith("\"") && !columnValue.EndsWith("\"") && string.IsNullOrEmpty(tempValue)))
+                    {
+                        SaveList.Add(columnValue.Trim('"'));
+                    }
+                    else
+                    {
+                        // included
+                        if (columnValue.StartsWith("\""))
+                        {
+                            if (string.IsNullOrEmpty(tempValue))
+                                tempValue += columnValue;
+                            else
+                                tempValue += ", " + columnValue;
+                        }
+                        // Not include
+                        else
+                        {
+                            if (columnValue.EndsWith("\""))
+                            {
+                                if (!string.IsNullOrEmpty(tempValue))
+                                    tempValue += ", " + columnValue;
+                                else
+                                    tempValue = columnValue;
+                                
+                                SaveList.Add(tempValue.Trim('"'));
+                                tempValue = string.Empty;
+                            }
+                            // Not containt "
+                            else
+                            {
+                                if (!string.IsNullOrEmpty(tempValue))
+                                    tempValue += ", " + columnValue;
+                                else
+                                    SaveList.Add(columnValue);
+                            }
+                        }
+                    }
+                }
+
+                // Return to Array
+                Arr_Split = SaveList.ToArray();
+            }
 
             var item = new ModMMO_ProductEntity();
             /*
@@ -103,7 +210,7 @@ namespace Import_Lazada
              * 32251.00,
              * 73,VND,"Laundry & Cleaning",Cleaning,"Cleaning Products",https://vn-live-01.
              */
-
+            
             item.SKU = getTextString(Arr_Split[0]);
             item = new ModMMO_ProductEntity()
             {
@@ -169,6 +276,29 @@ namespace Import_Lazada
                 return data;
 
             return 0;
+        }
+
+        public static string XmlEscape(string unescaped)
+        {
+            XmlDocument doc = new XmlDocument();
+            XmlNode node = doc.CreateElement("root");
+            node.InnerText = unescaped;
+            return node.InnerXml;
+        }
+
+        public static string XmlUnescape(string escaped)
+        {
+            XmlDocument doc = new XmlDocument();
+            XmlNode node = doc.CreateElement("root");
+            node.InnerXml = escaped;
+            return node.InnerText;
+        }
+
+        private void InsertToDB(string Data)
+        {
+            Data = string.Format("<ROOT>{0}</ROOT>", Data);
+            VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
+            var respones = db.AddProduct_Lazada(Data, 1);
         }
     }
 }
