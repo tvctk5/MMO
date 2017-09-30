@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[Web_Resource] (
+    [ID]     INT          IDENTITY (1, 1) NOT NULL,
+    [LangID] INT          NOT NULL,
+    [Code]   VARCHAR (50) NOT NULL,
+    [Value]  NTEXT        NULL,
+    CONSTRAINT [PK_T_RESOURCE] PRIMARY KEY CLUSTERED ([ID] ASC),
+    CONSTRAINT [FK_T_RESOURCE_T_LANG] FOREIGN KEY ([LangID]) REFERENCES [dbo].[Sys_Lang] ([ID]) NOT FOR REPLICATION
+);
+
+
+GO
+ALTER TABLE [dbo].[Web_Resource] NOCHECK CONSTRAINT [FK_T_RESOURCE_T_LANG];
+
