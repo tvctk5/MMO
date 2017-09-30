@@ -1314,7 +1314,17 @@
     <Parameter Name="ParentId" Parameter="parentId" Type="System.Int32" DbType="Int" />
     <Return Type="System.String" />
   </Function>
+  <Function Name="dbo.AddBrand_Lazada" Method="AddBrand_Lazada">
+    <Parameter Name="XML" Parameter="xML" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MarketplaceId" Parameter="marketplaceId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.AddProduct_Lazada" Method="AddProduct_Lazada">
+    <Parameter Name="XML" Parameter="xML" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MarketplaceId" Parameter="marketplaceId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddCategory_Lazada" Method="AddCategory_Lazada">
     <Parameter Name="XML" Parameter="xML" Type="System.String" DbType="NVarChar(MAX)" />
     <Parameter Name="MarketplaceId" Parameter="marketplaceId" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
