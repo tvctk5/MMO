@@ -1059,9 +1059,10 @@ namespace VSW.Lib.LinqToSql
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddCategory_Lazada")]
-		public void AddCategory_Lazada([global::System.Data.Linq.Mapping.ParameterAttribute(Name="XML", DbType="NVarChar(MAX)")] string xML, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MarketplaceId", DbType="Int")] System.Nullable<int> marketplaceId)
+		public int AddCategory_Lazada([global::System.Data.Linq.Mapping.ParameterAttribute(Name="XML", DbType="NVarChar(MAX)")] string xML, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MarketplaceId", DbType="Int")] System.Nullable<int> marketplaceId)
 		{
-			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), xML, marketplaceId);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), xML, marketplaceId);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	

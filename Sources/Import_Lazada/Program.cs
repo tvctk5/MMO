@@ -17,7 +17,7 @@ namespace Import_Lazada
         const string PathFile = @"C:\Users\Administrator\Downloads\feed.csv"; // @"C:\Users\CanTV\Downloads\feed_100.csv";
         static void Main(string[] args)
         {
-            var data = (new Program()).GetListDataFromText(PathFile);
+            // var data = (new Program()).GetListDataFromText(PathFile);
             //string Text_Format = @"<CATEGORY>
             //                            <SKU>{0}</SKU>
             //                            <Name>{1}</Name>
@@ -46,32 +46,42 @@ namespace Import_Lazada
             //Text_Format = Text_Format.Replace(System.Environment.NewLine, string.Empty).Replace(" ", string.Empty);
 
 
-            //// insert band
-            //var Brand = File.ReadAllText(@"D:\Private\Projects\MMO\Git\Sources\Import_Lazada\bin\Debug\Brand.txt");
+            // insert band
+            //var Brand = File.ReadAllText(@"D:\Private\Projects\MMO\Import\Brand.txt");
             //VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
             //var respones = db.AddBrand_Lazada(Brand, 1);
 
-            //// insert CATEAGORY
-            //var Category = File.ReadAllText(@"D:\Private\Projects\MMO\Git\Sources\Import_Lazada\bin\Debug\Category.txt");
+            // insert CATEAGORY
+            //var Category = File.ReadAllText(@"D:\Private\Projects\MMO\Import\Category.txt");
             //VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
             //var respones = db.AddCategory_Lazada(Category, 1);
 
             // insert PRODUCT
-            var PRODUCT_INSERT = File.ReadAllText(@"D:\Private\Projects\MMO\Import\Product2017_09_30_02_39_49_5463.txt");
-            var PRODUCT_MASTER = File.ReadAllText(@"D:\Private\Projects\MMO\Import\Product2017_10_01_11_26_22_0804.txt");
+            var PRODUCT_INSERT = string.Empty; // File.ReadAllText(@"D:\Private\Projects\MMO\Import\Product2017_09_30_02_39_49_5463.txt");
+            var PRODUCT_MASTER = File.ReadAllText(@"D:\Private\Projects\MMO\Import\ProductBASE.txt");
 
-            //DirectoryInfo newDir = new DirectoryInfo(@"D:\Private\Projects\MMO\Import");
-            //var ListFile = newDir.GetFiles().OrderBy(o => o.CreationTime).ToList();
-            //foreach(FileInfo file in ListFile)
-            //{
-            //    PRODUCT_INSERT = File.ReadAllText(file.FullName);
-            //    VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
-            //    var respones = db.AddProduct_Lazada(PRODUCT_INSERT, PRODUCT_MASTER, 1);
-            //    break;
-            //}
+            DirectoryInfo newDir = new DirectoryInfo(@"D:\Private\Projects\MMO\Import\Product");
+            var ListFile = newDir.GetFiles().OrderBy(o => o.CreationTime).ToList();
+            foreach (FileInfo file in ListFile)
+            {
+                PRODUCT_INSERT = File.ReadAllText(file.FullName);
+                VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
+                var respones = db.AddProduct_Lazada(PRODUCT_INSERT, PRODUCT_MASTER, 1);
+                PRODUCT_INSERT = string.Empty;
 
-            VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
-            var respones = db.AddProduct_Lazada(PRODUCT_INSERT, PRODUCT_MASTER, 1);
+                //if (!File.Exists(@"D:\Private\Projects\MMO\Import\LogProduct.txt"))
+                //{
+                    File.CreateText(@"D:\Private\Projects\MMO\Import\Log\" + file.Name);
+                    //File.WriteAllText(@"D:\Private\Projects\MMO\Import\LogProduct.txt", file.Name);
+                //}
+                //else
+                //    File.AppendAllText(@"D:\Private\Projects\MMO\Import\LogProduct.txt", "\r\n" + file.Name);
+
+                // break;
+            }
+
+            //VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
+            //var respones = db.AddProduct_Lazada(PRODUCT_INSERT, PRODUCT_MASTER, 1);
         }
 
         public List<ModMMO_ProductEntity> GetListDataFromText(string path)
