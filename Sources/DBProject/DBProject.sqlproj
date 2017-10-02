@@ -70,11 +70,6 @@
     <Folder Include="dbo\User Defined Types\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Database Triggers\AuditLogChangeDatabase.sql" />
-    <Build Include="dbo\Stored Procedures\ProductItem_Warehouse_Mapping_UpdateQuantityByProduct.sql" />
-    <Build Include="dbo\Stored Procedures\ProductItem_Warehouse_History_GetList.sql" />
-    <Build Include="dbo\Stored Procedures\ProductItems_GetByProductName.sql" />
-    <Build Include="dbo\Stored Procedures\ProductItems_GetByProductName.sql" />
     <Build Include="dbo\Tables\Web_Setting.sql" />
     <Build Include="dbo\Tables\Web_Resource.sql" />
     <Build Include="dbo\Tables\Web_Menu.sql" />
@@ -168,6 +163,10 @@
     <Build Include="dbo\Functions\FN_GET_CATEGORY_CURRENTCODE.sql" />
     <Build Include="dbo\Functions\FN_CREATE_CATEGORY.sql" />
     <Build Include="dbo\Stored Procedures\AddProduct_Lazada.sql" />
+    <Build Include="dbo\Tables\Mod_ListMail_Group_Email.sql" />
+    <Build Include="dbo\Tables\Mod_ListMail_Group.sql" />
+    <Build Include="dbo\Stored Procedures\AddCategory_Lazada.sql" />
+    <Build Include="dbo\Stored Procedures\AddBrand_Lazada.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SqlSchemaCompare2.scmp" />

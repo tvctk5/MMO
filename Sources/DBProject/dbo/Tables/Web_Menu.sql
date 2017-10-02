@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Web_Menu] (
     [ID]                  INT             IDENTITY (1, 1) NOT NULL,
-    [LangID]              INT             CONSTRAINT [DF_Web_Menu_LangID] DEFAULT ((1)) NULL,
+    [LangID]              INT             NULL,
     [ParentID]            INT             NULL,
     [ProductAreaId]       INT             NULL,
     [Name]                NVARCHAR (200)  NULL,
@@ -8,10 +8,10 @@
     [Type]                VARCHAR (50)    NULL,
     [Custom]              NVARCHAR (1000) NULL,
     [Order]               INT             NULL,
-    [ParentCode]          NVARCHAR (50)   CONSTRAINT [DF_Web_Menu_ParentCode] DEFAULT ((0)) NULL,
+    [ParentCode]          NVARCHAR (50)   NULL,
     [CurrentCode]         NVARCHAR (50)   NULL,
     [File]                NVARCHAR (200)  NULL,
-    [Activity]            BIT             CONSTRAINT [DF_Web_Menu_Activity] DEFAULT ((1)) NULL,
+    [Activity]            BIT             NULL,
     [CssIcon]             NVARCHAR (50)   NULL,
     [MarketplaceId]       INT             CONSTRAINT [DF_Web_Menu_MarketplaceId] DEFAULT ((0)) NULL,
     [IsParentMarketplace] BIT             CONSTRAINT [DF_Web_Menu_IsParentMarketplace] DEFAULT ((0)) NULL,
@@ -20,6 +20,12 @@
     CONSTRAINT [FK_T_MENU_T_LANG] FOREIGN KEY ([LangID]) REFERENCES [dbo].[Sys_Lang] ([ID]) NOT FOR REPLICATION,
     CONSTRAINT [FK_Web_Menu_AreaId] FOREIGN KEY ([ProductAreaId]) REFERENCES [dbo].[Mod_Product_Area] ([ID])
 );
+
+
+GO
+ALTER TABLE [dbo].[Web_Menu] NOCHECK CONSTRAINT [FK_T_MENU_T_LANG];
+
+
 
 
 GO

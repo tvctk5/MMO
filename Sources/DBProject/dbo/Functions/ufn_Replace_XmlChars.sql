@@ -21,14 +21,7 @@ begin
  set @XML      = replace( @XML, 'xmlns="http://nexjensys.com/ns/webconnect"','')
  set @XML      = replace( @XML, '–N','-N')
 
- -- Just five: &lt; (<), &amp; (&), &gt; (>), &quot; ("), and &apos; (').
- --set @XML      = replace(@XML, '&', '&amp;');
- --set @XML      = replace(@XML, '&amp;amp;', '&amp;');
- 
- --set @XML      = replace(@XML, '<', '&lt;'); 
- --set @XML      = replace(@XML, '>', '&gt;'); 
- --set @XML      = replace(@XML, '"', '&quot;'); 
- --set @XML      = replace(@XML, '''', '&apos;');
+ --set @XML      = replace(@XML, '''', '''''')
 
  return @XML
   

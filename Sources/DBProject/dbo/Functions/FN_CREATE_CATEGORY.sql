@@ -1,9 +1,4 @@
-﻿-- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date, ,>
--- Description:	<Description, ,>
--- =============================================
-CREATE FUNCTION FN_CREATE_CATEGORY
+﻿CREATE FUNCTION [dbo].[FN_CREATE_CATEGORY]
 (
 	-- Add the parameters for the function here
 	-- <@Param1, sysname, @p1> <Data_Type_For_Param1, , int>

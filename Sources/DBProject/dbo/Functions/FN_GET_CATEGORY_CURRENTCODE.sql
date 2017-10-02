@@ -1,9 +1,4 @@
-﻿-- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date, ,>
--- Description:	<Description, ,>
--- =============================================
-CREATE FUNCTION [dbo].[FN_GET_CATEGORY_CURRENTCODE]
+﻿CREATE FUNCTION [dbo].[FN_GET_CATEGORY_CURRENTCODE]
 (
 	@ParentId int
 )
