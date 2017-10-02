@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DBProject</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{c8d76b4c-f3f8-403f-abaf-f0b07a067106}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Renogy_database</RootNamespace>
+    <AssemblyName>Renogy_database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'QA|AnyCPU' ">
+    <OutputPath>bin\QA\</OutputPath>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Database Triggers\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\User Defined Types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Web_Setting.sql" />
+    <Build Include="dbo\Tables\Web_Resource.sql" />
+    <Build Include="dbo\Tables\Web_Menu.sql" />
+    <Build Include="dbo\Tables\Sys_Template.sql" />
+    <Build Include="dbo\Tables\Sys_Site.sql" />
+    <Build Include="dbo\Tables\Sys_Page.sql" />
+    <Build Include="dbo\Tables\Sys_Lang.sql" />
+    <Build Include="dbo\Tables\Mod_Ward.sql" />
+    <Build Include="dbo\Tables\Mod_Test.sql" />
+    <Build Include="dbo\Tables\Mod_Tag.sql" />
+    <Build Include="dbo\Tables\Mod_Province.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Types.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Transport.sql" />
+    <Build Include="dbo\Tables\Mod_Product_SurveyGroup_Detail.sql" />
+    <Build Include="dbo\Tables\Mod_Product_SurveyGroup.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Supplier.sql" />
+    <Build Include="dbo\Tables\Mod_Product_SlideShow.sql" />
+    <Build Include="dbo\Tables\Mod_Product_RegisterEmail.sql" />
+    <Build Include="dbo\Tables\Mod_Product_PropertiesList_Values.sql" />
+    <Build Include="dbo\Tables\Mod_Product_PropertiesList.sql" />
+    <Build Include="dbo\Tables\Mod_Product_PropertiesGroups.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Properties_Groups.sql" />
+    <Build Include="dbo\Tables\Mod_Product_PriceSale_History.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Price_History.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Policy_ProductInfo.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Policy_Details.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Policy.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Payment.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Order_Details.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Order.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Office.sql" />
+    <Build Include="dbo\Tables\Mod_Product_National_Area.sql" />
+    <Build Include="dbo\Tables\Mod_Product_National.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Manufacturer.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info_Types.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info_Size.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info_PropertyFilter.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info_ProductGroups.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info_Office.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info_Details.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info_Color.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info_City.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info_AreaInNational.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info_Agent.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Info.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Groups_PropertiesGroups.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Groups.sql" />
+    <Build Include="dbo\Tables\Mod_Product_FilterValues.sql" />
+    <Build Include="dbo\Tables\Mod_Product_FilterGroups.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Filter.sql" />
+    <Build Include="dbo\Tables\Mod_Product_CustomersGroups.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Customers_Groups.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Customers.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Currency.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Comments.sql" />
+    <Build Include="dbo\Tables\Mod_Product_City.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Area_PropretyGroup.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Area.sql" />
+    <Build Include="dbo\Tables\Mod_Product_Agent.sql" />
+    <Build Include="dbo\Tables\Mod_Product.sql" />
+    <Build Include="dbo\Tables\Mod_Parameters.sql" />
+    <Build Include="dbo\Tables\Mod_Online.sql" />
+    <Build Include="dbo\Tables\Mod_NewsTag.sql" />
+    <Build Include="dbo\Tables\Mod_News.sql" />
+    <Build Include="dbo\Tables\Mod_Menu_Type.sql" />
+    <Build Include="dbo\Tables\Mod_Menu_Dynamic.sql" />
+    <Build Include="dbo\Tables\Mod_Marketplace.sql" />
+    <Build Include="dbo\Tables\Mod_Loai_DaiLy.sql" />
+    <Build Include="dbo\Tables\Mod_ListMailNewsLetter.sql" />
+    <Build Include="dbo\Tables\Mod_Feedback.sql" />
+    <Build Include="dbo\Tables\Mod_DT_Ky_DaiLy_DonHang_SanPham.sql" />
+    <Build Include="dbo\Tables\Mod_DT_Ky_DaiLy_DonHang.sql" />
+    <Build Include="dbo\Tables\Mod_DT_Ky_DaiLy.sql" />
+    <Build Include="dbo\Tables\Mod_DT_Ky.sql" />
+    <Build Include="dbo\Tables\Mod_DT_DaiLy.sql" />
+    <Build Include="dbo\Tables\Mod_DT_CapDaiLy_TyLe.sql" />
+    <Build Include="dbo\Tables\Mod_District.sql" />
+    <Build Include="dbo\Tables\Mod_Currency.sql" />
+    <Build Include="dbo\Tables\Mod_Country.sql" />
+    <Build Include="dbo\Tables\Mod_Comment.sql" />
+    <Build Include="dbo\Tables\Mod_Chat_History.sql" />
+    <Build Include="dbo\Tables\Mod_AutoLinks.sql" />
+    <Build Include="dbo\Tables\Mod_Adv.sql" />
+    <Build Include="dbo\Tables\MMO_Product.sql" />
+    <Build Include="dbo\Tables\CP_UserRole.sql" />
+    <Build Include="dbo\Tables\CP_UserLog.sql" />
+    <Build Include="dbo\Tables\CP_User.sql" />
+    <Build Include="dbo\Tables\CP_Role.sql" />
+    <Build Include="dbo\Tables\CP_Access.sql" />
+    <Build Include="dbo\Functions\ufn_Replace_XmlChars.sql" />
+    <Build Include="dbo\Functions\FN_GET_CATEGORY_CURRENTCODE.sql" />
+    <Build Include="dbo\Functions\FN_CREATE_CATEGORY.sql" />
+    <Build Include="dbo\Stored Procedures\AddProduct_Lazada.sql" />
+    <Build Include="dbo\Tables\Mod_ListMail_Group_Email.sql" />
+    <Build Include="dbo\Tables\Mod_ListMail_Group.sql" />
+    <Build Include="dbo\Stored Procedures\AddCategory_Lazada.sql" />
+    <Build Include="dbo\Stored Procedures\AddBrand_Lazada.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SqlSchemaCompare2.scmp" />
+  </ItemGroup>
+</Project>

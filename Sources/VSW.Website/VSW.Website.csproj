@@ -1613,6 +1613,7 @@
     <Content Include="Views\CMenu\Top.ascx" />
     <Content Include="Views\CNews\DichVu.ascx" />
     <Content Include="Views\CNews\News.ascx" />
+    <Content Include="Views\CResources\Default.ascx" />
     <Content Include="Views\CStatic\Support.ascx" />
     <Content Include="Views\CText\ContactMaketing.ascx" />
     <Content Include="Views\CText\ContactPhoneNumber.ascx" />

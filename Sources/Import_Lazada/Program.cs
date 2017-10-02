@@ -44,6 +44,34 @@ namespace Import_Lazada
             //                            <Category_LV3_Code>{22}</Category_LV3_Code>
             //                        </CATEGORY>";
             //Text_Format = Text_Format.Replace(System.Environment.NewLine, string.Empty).Replace(" ", string.Empty);
+
+
+            //// insert band
+            //var Brand = File.ReadAllText(@"D:\Private\Projects\MMO\Git\Sources\Import_Lazada\bin\Debug\Brand.txt");
+            //VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
+            //var respones = db.AddBrand_Lazada(Brand, 1);
+
+            //// insert CATEAGORY
+            //var Category = File.ReadAllText(@"D:\Private\Projects\MMO\Git\Sources\Import_Lazada\bin\Debug\Category.txt");
+            //VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
+            //var respones = db.AddCategory_Lazada(Category, 1);
+
+            // insert PRODUCT
+            var PRODUCT_INSERT = File.ReadAllText(@"D:\Private\Projects\MMO\Import\Product2017_09_30_02_39_49_5463.txt");
+            var PRODUCT_MASTER = File.ReadAllText(@"D:\Private\Projects\MMO\Import\Product2017_10_01_11_26_22_0804.txt");
+
+            //DirectoryInfo newDir = new DirectoryInfo(@"D:\Private\Projects\MMO\Import");
+            //var ListFile = newDir.GetFiles().OrderBy(o => o.CreationTime).ToList();
+            //foreach(FileInfo file in ListFile)
+            //{
+            //    PRODUCT_INSERT = File.ReadAllText(file.FullName);
+            //    VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
+            //    var respones = db.AddProduct_Lazada(PRODUCT_INSERT, PRODUCT_MASTER, 1);
+            //    break;
+            //}
+
+            VSW.Lib.LinqToSql.DbDataContext db = VSW.Lib.LinqToSql.DbExecute.Create(true);
+            var respones = db.AddProduct_Lazada(PRODUCT_INSERT, PRODUCT_MASTER, 1);
         }
 
         public List<ModMMO_ProductEntity> GetListDataFromText(string path)
@@ -210,7 +238,7 @@ namespace Import_Lazada
             if (!string.IsNullOrEmpty(Data_Category))
             {
                 // Insert data
-                InsertCategoryToDB(Data_Product); // InsertToDB(Data);
+                InsertCategoryToDB(Data_Category); // InsertToDB(Data);
                 Data_Category = string.Empty;
             }
 
@@ -227,6 +255,8 @@ namespace Import_Lazada
         {
             if (string.IsNullOrEmpty(text_line))
                 return null;
+
+            text_line = text_line.Replace("\\\"", "#CAN_TV");
 
             string[] Arr_Split = new string[16]; // text_line.Split(',');
             var defaultArr = text_line.Split(',');
@@ -248,8 +278,11 @@ namespace Import_Lazada
                         {
                             SaveList.Add(tempValue.Trim('"'));
                             tempValue = string.Empty;
-                            continue;
                         }
+                        else
+                            tempValue += columnValue;
+
+                        continue;
                     }
 
                     if ((columnValue.StartsWith("\"") && columnValue.EndsWith("\"")) ||
@@ -308,32 +341,62 @@ namespace Import_Lazada
              * 73,VND,"Laundry & Cleaning",Cleaning,"Cleaning Products",https://vn-live-01.
              */
 
-            item.SKU = getTextString(Arr_Split[0]);
-            item = new ModMMO_ProductEntity()
+            if (text_line.Contains("#CAN_TV"))
             {
-                SKU = getTextString(Arr_Split[0]),
-                Name = getTextString(Arr_Split[1]),
-                SalePrice = getPrice(Arr_Split[2]),
-                DiscountedPrice = getPrice(Arr_Split[3]),
-                DiscountedPercentage = getIntegerType(Arr_Split[4]),
-                // Currency
-                Category_LV1 = getTextString(Arr_Split[6]),
-                Category_LV2 = getTextString(Arr_Split[7]),
-                Category_LV3 = getTextString(Arr_Split[8]),
-                Image1 = getTextString(Arr_Split[9]),
-                Image2 = getTextString(Arr_Split[10]),
-                Image3 = getTextString(Arr_Split[11]),
-                Image4 = getTextString(Arr_Split[12]),
-                Image5 = getTextString(Arr_Split[13]),
-                RedirectUrl = getTextString(Arr_Split[14]),
-                Brand = getTextString(Arr_Split[15])
-            };
+                item = new ModMMO_ProductEntity()
+                {
+                    SKU = getTextString(Arr_Split[0].Replace("#CAN_TV", "\\\"")),
+                    Name = getTextString(Arr_Split[1].Replace("#CAN_TV", "\\\"")),
+                    SalePrice = getPrice(Arr_Split[2]),
+                    DiscountedPrice = getPrice(Arr_Split[3]),
+                    DiscountedPercentage = getIntegerType(Arr_Split[4]),
+                    // Currency
+                    Category_LV1 = getTextString(Arr_Split[6].Replace("#CAN_TV", "\\\"")),
+                    Category_LV2 = getTextString(Arr_Split[7].Replace("#CAN_TV", "\\\"")),
+                    Category_LV3 = getTextString(Arr_Split[8].Replace("#CAN_TV", "\\\"")),
+                    Image1 = getTextString(Arr_Split[9].Replace("#CAN_TV", "\\\"")),
+                    Image2 = getTextString(Arr_Split[10].Replace("#CAN_TV", "\\\"")),
+                    Image3 = getTextString(Arr_Split[11].Replace("#CAN_TV", "\\\"")),
+                    Image4 = getTextString(Arr_Split[12].Replace("#CAN_TV", "\\\"")),
+                    Image5 = getTextString(Arr_Split[13].Replace("#CAN_TV", "\\\"")),
+                    RedirectUrl = getTextString(Arr_Split[14].Replace("#CAN_TV", "\\\"")),
+                    Brand = getTextString(Arr_Split[15].Replace("#CAN_TV", "\\\""))
+                };
 
-            item.CategoryPath = string.Format("{0}>{1}>{2}", item.Category_LV1, item.Category_LV2, item.Category_LV3);
-            item.DiscountedValue = (item.SalePrice > item.DiscountedPrice) ? (item.SalePrice - item.DiscountedPrice) : 0;
-            item.DisplayName = item.Name;
-            item.MarketplaceId = MarketplaceId;
-            item.PageTitle = item.Name;
+                item.CategoryPath = string.Format("{0}>{1}>{2}", item.Category_LV1, item.Category_LV2, item.Category_LV3);
+                item.DiscountedValue = (item.SalePrice > item.DiscountedPrice) ? (item.SalePrice - item.DiscountedPrice) : 0;
+                item.DisplayName = item.Name;
+                item.MarketplaceId = MarketplaceId;
+                item.PageTitle = item.Name;
+            }
+            else
+            {
+                item = new ModMMO_ProductEntity()
+                {
+                    SKU = getTextString(Arr_Split[0]),
+                    Name = getTextString(Arr_Split[1]),
+                    SalePrice = getPrice(Arr_Split[2]),
+                    DiscountedPrice = getPrice(Arr_Split[3]),
+                    DiscountedPercentage = getIntegerType(Arr_Split[4]),
+                    // Currency
+                    Category_LV1 = getTextString(Arr_Split[6]),
+                    Category_LV2 = getTextString(Arr_Split[7]),
+                    Category_LV3 = getTextString(Arr_Split[8]),
+                    Image1 = getTextString(Arr_Split[9]),
+                    Image2 = getTextString(Arr_Split[10]),
+                    Image3 = getTextString(Arr_Split[11]),
+                    Image4 = getTextString(Arr_Split[12]),
+                    Image5 = getTextString(Arr_Split[13]),
+                    RedirectUrl = getTextString(Arr_Split[14]),
+                    Brand = getTextString(Arr_Split[15])
+                };
+
+                item.CategoryPath = string.Format("{0}>{1}>{2}", item.Category_LV1, item.Category_LV2, item.Category_LV3);
+                item.DiscountedValue = (item.SalePrice > item.DiscountedPrice) ? (item.SalePrice - item.DiscountedPrice) : 0;
+                item.DisplayName = item.Name;
+                item.MarketplaceId = MarketplaceId;
+                item.PageTitle = item.Name;
+            }
 
             return item;
         }

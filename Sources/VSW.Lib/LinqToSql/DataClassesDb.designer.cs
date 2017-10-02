@@ -1052,17 +1052,16 @@ namespace VSW.Lib.LinqToSql
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddProduct_Lazada")]
-		public int AddProduct_Lazada([global::System.Data.Linq.Mapping.ParameterAttribute(Name="XML", DbType="NVarChar(MAX)")] string xML, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MarketplaceId", DbType="Int")] System.Nullable<int> marketplaceId)
+		public int AddProduct_Lazada([global::System.Data.Linq.Mapping.ParameterAttribute(Name="XML", DbType="NVarChar(MAX)")] string xML, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="XML2", DbType="NVarChar(MAX)")] string xML2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MarketplaceId", DbType="Int")] System.Nullable<int> marketplaceId)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), xML, marketplaceId);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), xML, xML2, marketplaceId);
 			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddCategory_Lazada")]
-		public int AddCategory_Lazada([global::System.Data.Linq.Mapping.ParameterAttribute(Name="XML", DbType="NVarChar(MAX)")] string xML, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MarketplaceId", DbType="Int")] System.Nullable<int> marketplaceId)
+		public void AddCategory_Lazada([global::System.Data.Linq.Mapping.ParameterAttribute(Name="XML", DbType="NVarChar(MAX)")] string xML, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MarketplaceId", DbType="Int")] System.Nullable<int> marketplaceId)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), xML, marketplaceId);
-			return ((int)(result.ReturnValue));
+			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), xML, marketplaceId);
 		}
 	}
 	
