@@ -1,0 +1,2 @@
+Veritone has architected its platform to be flexible and extensible to accommodate development partners across many different categories of cognition.  
+Due to the wide variety in cognitive engine capabilities, inputs/outputs, and parameter settings potentially available from ecosystem partners, we have created a modular framework that seeks to normalize and standardize engine outputs.
